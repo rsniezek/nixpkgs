@@ -125,6 +125,9 @@ stdenv.mkDerivation (finalAttrs: {
     };
 
     updateScript = nix-update-script { };
+    setupHooks = [
+      ./setup-hook.sh
+    ];
   };
 
   meta = with lib; {
